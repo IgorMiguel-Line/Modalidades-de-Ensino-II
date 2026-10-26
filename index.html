@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apresentação Didática Completa: SINASE - Marco Situacional e Políticas Públicas</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN para gráficos visuais -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryDark: '#0f172a',
+                        accentBlue: '#2563eb',
+                        softCard: 'rgba(255, 255, 255, 0.95)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-slate-100 via-blue-50/50 to-indigo-100/50 text-slate-800 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen">
+
+    <!-- Barra de Progresso de Leitura -->
+    <div id="progress-bar" class="fixed top-0 left-0 h-1.5 bg-accentBlue z-50 transition-all duration-150" style="width: 0%;"></div>
+
+    <!-- Cabeçalho Fixo / Navegação para os 4 Apresentadores -->
+    <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="bg-accentBlue text-white p-2 rounded-lg text-sm font-bold shadow-sm"><i class="fa-solid fa-chalkboard-user"></i></span>
+                <span class="font-bold text-slate-900 text-base hidden sm:inline">Seminário SINASE (2006)</span>
+            </div>
+            <nav class="flex items-center space-x-2 md:space-x-4 text-xs md:text-sm font-medium text-slate-600">
+                <a href="#apresentador-1" class="hover:text-accentBlue transition px-2.5 py-1 rounded bg-slate-100/80">Igor Miguel</a>
+                <a href="#apresentador-2" class="hover:text-accentBlue transition px-2.5 py-1 rounded bg-slate-100/80">Kauê do Nascimento</a>
+                <a href="#apresentador-3" class="hover:text-accentBlue transition px-2.5 py-1 rounded bg-slate-100/80">Lucas Alves</a>
+                <a href="#apresentador-4" class="hover:text-accentBlue transition px-2.5 py-1 rounded bg-slate-100/80">Ezequiel Ferreira</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal em Modo Scroll -->
+    <main class="max-w-5xl mx-auto px-4 py-12 space-y-24">
+
+        <!-- Seção de Abertura -->
+        <section class="text-center space-y-6 pt-6">
+            <hr>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                Sistema Nacional de Atendimento Socioeducativo <span class="text-accentBlue">(SINASE)</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                Marco Situacional / Conceito e Integração das políticas púbicas
+            </p>
+            <hr>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 1: APRESENTADOR 1 -->
+        <!-- ========================================== -->
+        <section id="apresentador-1" class="space-y-8 pt-6">
+            <div class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <span class="bg-blue-500/30 text-blue-200 text-xs font-bold uppercase px-3 py-1 rounded-full border border-blue-400/30">Bloco 1 de 4</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-2">Contexto Histórico, Legal e Introdução ao SINASE</h2>
+                </div>
+                <div class="text-blue-200 text-sm bg-blue-950/50 px-4 py-2 rounded-xl border border-blue-800/50">
+                    <i class="fa-solid fa-user-tie mr-2"></i> Da Tutela à Proteção Integral
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-history text-accentBlue"></i> Ruptura de Paradigmas
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A transição entre o antigo modelo e o atual representou uma guinada filosófica e jurídica profunda na história do Brasil.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="p-3 bg-red-50 rounded-xl border border-red-100 text-xs">
+                            <strong class="text-red-700 block mb-1"><i class="fa-solid fa-times-circle mr-1"></i> Exemplo do Passado (Código de Menores / 1979):</strong>
+                            Um adolescente em situação de vulnerabilidade ou autor de ato infracional era rotulado como "menor abandonado ou delinqüente". O Estado agia de forma tutelar e arbitrária, internando-os em grandes reformatórios sem direito à ampla defesa.
+                        </div>
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-xs">
+                            <strong class="text-emerald-700 block mb-1"><i class="fa-solid fa-check-circle mr-1"></i> Exemplo Atual (ECA / 1990 e SINASE):</strong>
+                            O jovem é tratado como <strong>sujeito de direitos e responsabilidades</strong>. A intervenção estatal é regida pelo devido processo legal e focada no desenvolvimento pedagógico e cidadão.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-lightbulb text-accentBlue"></i> Por que o SINASE foi necessário?
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Muitas leis bonitas ficavam apenas no papel (distinção entre o direito legal e o direito real). Entre 2002 e 2004, o CONANDA e a SEDH articularam debates nacionais para criar o SINASE.
+                    </p>
+                    <div class="p-4 bg-blue-50/80 rounded-xl border border-blue-100 text-xs text-slate-700 space-y-2">
+                        <p><strong>Exemplo Prático de Aplicação:</strong> Padronizar as regras de execução em todo o país para evitar que um mesmo ato infracional recebesse punições puramente arbitrárias em estados diferentes, unindo a responsabilização legal com a ação socioeducativa pedagógica.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 2: APRESENTADOR 2 -->
+        <!-- ========================================== -->
+        <section id="apresentador-2" class="space-y-8 pt-6">
+            <div class="bg-gradient-to-r from-indigo-900 to-purple-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <span class="bg-purple-500/30 text-purple-200 text-xs font-bold uppercase px-3 py-1 rounded-full border border-purple-400/30">Bloco 2 de 4</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-2">Marco Situacional: A Realidade da Adolescência no Brasil</h2>
+                </div>
+                <div class="text-purple-200 text-sm bg-purple-950/50 px-4 py-2 rounded-xl border border-purple-800/50">
+                    <i class="fa-solid fa-user-tie mr-2"></i> Desigualdade, Escolarização e Gráficos
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 leading-relaxed">
+                O Capítulo 1 detalha os dados demográficos e sociais que retratam o cenário de profunda desigualdade vivido pelos jovens no Brasil.
+            </p>
+
+            <!-- Grid com Gráfico Visual 1 -->
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-bar text-accentBlue"></i> Disparidade Educacional e Racial
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        A análise estatística oficial revela que a pobreza e a falta de acesso à educação de qualidade afetam desproporcionadamente a população negra.
+                    </p>
+                    <div class="p-3 bg-purple-50 rounded-xl border border-purple-100 text-xs text-purple-900">
+                        <strong>Exemplo prático do documento:</strong> Enquanto 60% dos adolescentes brancos concluíam o ensino médio, apenas 36,3% dos afrodescendentes atingiam o mesmo nível. Além disso, jovens negros tinham 3,23 vezes mais chances de não serem alfabetizados.
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center">
+                    <h4 class="text-xs font-bold uppercase text-slate-500 mb-2">Conclusão do Ensino Médio por Raça/Etnia</h4>
+                    <div class="w-full max-w-xs h-64">
+                        <canvas id="graficoEducacao"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segundo Gráfico Visual (Mortalidade Juvenil) -->
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div class="glass-card p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center order-2 md:order-1">
+                    <h4 class="text-xs font-bold uppercase text-slate-500 mb-2">Proporção de Homicídios (Jovens vs. Não Jovens)</h4>
+                    <div class="w-full max-w-xs h-64">
+                        <canvas id="graficoMortalidade"></canvas>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4 order-1 md:order-2">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-triangle-exclamation text-red-500"></i> Mortalidade e Violência Juvenil
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        As estatísticas de mortalidade refletem a negação de cidadania e os contextos de extrema vulnerabilidade social nas periferias.
+                    </p>
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100 text-xs text-red-900">
+                        <strong>Exemplo prático do documento:</strong> Do total de mortes violentas por causas externas na população jovem, <strong>39,9% referem-se a homicídios</strong>, evidenciando que a juventude é a principal vítima da violência letal no país.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 3: APRESENTADOR 3 -->
+        <!-- ========================================== -->
+        <section id="apresentador-3" class="space-y-8 pt-6">
+            <div class="bg-gradient-to-r from-emerald-900 to-teal-900 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <span class="bg-emerald-500/30 text-emerald-200 text-xs font-bold uppercase px-3 py-1 rounded-full border border-emerald-400/30">Bloco 3 de 4</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-2">Realidade Institucional e o Perfil no Sistema Socioeducativo</h2>
+                </div>
+                <div class="text-emerald-200 text-sm bg-emerald-950/50 px-4 py-2 rounded-xl border border-emerald-800/50">
+                    <i class="fa-solid fa-user-tie mr-2"></i> Vagas, Unidades e Auditoria do TCU
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6 items-center">
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-pie text-emerald-600"></i> O Perfil e as Vagas no Sistema
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Dos 39.578 adolescentes identificados no sistema socioeducativo, a distribuição demonstra a prioridade conceitual e a realidade das unidades.
+                    </p>
+                    <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100 text-xs text-emerald-900 space-y-1">
+                        <strong>Exemplo prático de atendimento:</strong>
+                        <ul class="list-disc list-inside mt-1 space-y-1">
+                            <li><strong>70% em meio aberto</strong> (Liberdade Assistida e Prestação de Serviços à Comunidade).</li>
+                            <li><strong>30% em privação de liberdade</strong> (Internação e Semiliberdade), com perfil majoritariamente masculino, pobre, com defasagem escolar severa e histórico de uso de drogas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-2xl shadow-sm flex flex-col items-center justify-center">
+                    <h4 class="text-xs font-bold uppercase text-slate-500 mb-2">Proporção: Meio Aberto vs. Privação de Liberdade</h4>
+                    <div class="w-full max-w-xs h-64">
+                        <canvas id="graficoModalidades"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                    <i class="fa-solid fa-building-shield text-amber-600"></i> Alertas Práticos da Auditoria do TCU (2003)
+                </h3>
+                <div class="grid md:grid-cols-3 gap-4 text-xs text-slate-600">
+                    <div class="bg-slate-50/80 p-4 rounded-xl border border-slate-200/60 space-y-2">
+                        <h4 class="font-bold text-slate-800 text-sm">Exemplo de Inadequação Física</h4>
+                        <p>Unidades operando em antigas prisões ou em prédios adaptados sem áreas para esportes, com superlotação de até 5 adolescentes em quartos individuais projetados para um só ocupante.</p>
+                    </div>
+                    <div class="bg-slate-50/80 p-4 rounded-xl border border-slate-200/60 space-y-2">
+                        <h4 class="font-bold text-slate-800 text-sm">Exemplo de Déficit Operacional</h4>
+                        <p>Falta de vagas simultâneas na internação provisória e ausência de equipes técnicas multidisciplinares (psicólogos e assistentes sociais em número suficiente).</p>
+                    </div>
+                    <div class="bg-slate-50/80 p-4 rounded-xl border border-slate-200/60 space-y-2">
+                        <h4 class="font-bold text-slate-800 text-sm">Exemplo de Solução Apontada</h4>
+                        <p>Municipalização efetiva do meio aberto e regionalização dos programas de internação para manter o vínculo familiar e comunitário do adolescente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- BLOCO 4: APRESENTADOR 4 -->
+        <!-- ========================================== -->
+        <section id="apresentador-4" class="space-y-8 pt-6">
+            <div class="bg-gradient-to-r from-slate-900 to-blue-950 text-white p-6 rounded-2xl shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div>
+                    <span class="bg-blue-500/30 text-blue-200 text-xs font-bold uppercase px-3 py-1 rounded-full border border-blue-400/30">Bloco 4 de 4</span>
+                    <h2 class="text-2xl md:text-3xl font-bold mt-2">Conceito e Integração das Políticas Públicas (Capítulo 2)</h2>
+                </div>
+                <div class="text-blue-200 text-sm bg-blue-900/50 px-4 py-2 rounded-xl border border-blue-700/50">
+                    <i class="fa-solid fa-user-tie mr-2"></i> SGD, SINASE e Intersetorialidade
+                </div>
+            </div>
+
+            <p class="text-sm text-slate-600 leading-relaxed">
+                O Capítulo 2 aborda a engrenagem institucional que faz o SINASE funcionar na prática através da articulação entre diferentes pastas de governo.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-accentBlue"></i> O Sistema de Garantia de Direitos (SGD)
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        O SGD integra o Estado e a sociedade através de três pilares de atuação conjunta.
+                    </p>
+                    <div class="space-y-2 text-xs">
+                        <div class="p-3 bg-blue-50 rounded-xl border border-blue-100">
+                            <strong>Exemplo de Promoção:</strong> Programas de transferência de renda (como o SUAS) para apoiar a família do jovem.
+                        </div>
+                        <div class="p-3 bg-amber-50 rounded-xl border border-amber-100">
+                            <strong>Exemplo de Defesa:</strong> Atuação de Defensorias Públicas, Varas da Infância e Conselhos Tutelares.
+                        </div>
+                        <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-100">
+                            <strong>Exemplo de Controle Social:</strong> Fiscalização exercida pelos Conselhos de Direitos (CMDCA/CEDCA/CONANDA).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl shadow-sm space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+                        <i class="fa-solid fa-puzzle-piece text-accentBlue"></i> Incompletude Institucional na Prática
+                    </h3>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        Nenhuma instituição resolve tudo sozinha. O SINASE exige intersetorialidade constante.
+                    </p>
+                    <div class="p-4 bg-slate-50/80 rounded-xl border border-slate-200/60 text-xs text-slate-700 space-y-2">
+                        <p><strong>Exemplo Prático de Intersetorialidade:</strong> Quando um adolescente cumpre medida socioeducativa, o programa não cuida apenas da segurança: ele aciona a <em>Secretaria de Educação</em> para garantir a matrícula escolar, o <em>SUS</em> para atendimento de saúde mental e o <em>Sine/Trabalho</em> para cursos profissionalizantes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 text-slate-400 py-10 border-t border-slate-800 text-center text-xs space-y-2 mt-20">
+        <p>Apresentação estruturada com base na obra oficial: <strong>Sistema Nacional de Atendimento Socioeducativo - SINASE (CONANDA / SEDH, 2006)</strong>.</p>
+    </footer>
+
+    <!-- Script de Barra de Progresso e Configuração dos Gráficos Chart.js -->
+    <script>
+        // Barra de progresso de leitura
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+
+        // Configuração dos Gráficos com Chart.js
+        window.addEventListener('DOMContentLoaded', () => {
+            // 1. Gráfico de Educação (Conclusão do Ensino Médio por Raça)
+            const ctxEducacao = document.getElementById('graficoEducacao').getContext('2d');
+            new Chart(ctxEducacao, {
+                type: 'bar',
+                data: {
+                    labels: ['Branca', 'Negra/Parda'],
+                    datasets: [{
+                        label: '% Conclusão Ensino Médio',
+                        data: [60.0, 36.3],
+                        backgroundColor: ['#2563eb', '#9333ea'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { beginAtZero: true, max: 100 } }
+                }
+            });
+
+            // 2. Gráfico de Mortalidade (Homicídios)
+            const ctxMortalidade = document.getElementById('graficoMortalidade').getContext('2d');
+            new Chart(ctxMortalidade, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Homicídios (Jovens)', 'Outras Causas (Jovens)'],
+                    datasets: [{
+                        data: [39.9, 60.1],
+                        backgroundColor: ['#dc2626', '#e2e8f0'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } } }
+                }
+            });
+
+            // 3. Gráfico de Modalidades de Atendimento no SINASE
+            const ctxModalidades = document.getElementById('graficoModalidades').getContext('2d');
+            new Chart(ctxModalidades, {
+                type: 'pie',
+                data: {
+                    labels: ['Meio Aberto (LA / PSC)', 'Privação de Liberdade (Internação / Semiliberdade)'],
+                    datasets: [{
+                        data: [70, 30],
+                        backgroundColor: ['#059669', '#2563eb'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 } } } }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
